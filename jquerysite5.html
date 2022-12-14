@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function(){
+        $(document).tooltip();
+    })
+    $(function(){
+        $('#datepicker').datepicker();
+    });
+    $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 100, 400 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "transfer" ) {
+        options = { to: "#button", className: "ui-effects-transfer" };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    // Callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+      return false;
+    });
+  } );
+  $( function() {
+    $( "#selectable" ).selectable();
+  } );
+  </script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+          .head{
+            width:100%;
+            height:100px;
+            background-color: rgb(3, 52, 105);
+            font-size: 0px;
+           
+        }
+        #nav{
+            display: flex;
+            color:white;
+            font-size: 30px;
+           
+            justify-content: space-evenly;
+          
+            
+            
+        }
+        .navb{
+            color:white;
+            text-decoration: none;
+            margin-top: 30px;
+        }
+        .navb:hover{
+            color:gray;
+        }
+        h1{
+            text-align: center;
+            color:rgb(3, 52, 105);
+        }
+        #left{
+            width:60%;
+            height:540px;
+            
+         
+        }
+        #right{
+            width:40%;
+            height:500px;
+         
+            
+        }
+        #container{
+            display: flex;
+            flex-direction: row;
+         
+        }
+        #field{
+            font-size: 20px;
+            text-align: center;
+            border:0;
+        }
+        
+        #amount{
+            border: none;
+        }
+        #top{
+            height:340px;
+            width:95%;
+            margin: auto;
+
+        }
+        #bottom{
+            height:auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        
+        
+           
+        }
+        .images{
+            width:30%;
+            height:100%;
+            border:2px solid black;
+        }
+        #img1{
+            background-image: url(Images/cancun.hotel1.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+       
+        }
+        #img2{
+            background-image: url(Images/cancun.hotel2.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+
+        }
+        #img3{
+            background-image: url(Images/cancun.hotel3.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+        
+        }
+        #img4{
+            background-image: url(Images/cancun.hotel4.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+
+        }
+        #img5{
+            background-image: url(Images/cancun.hotel5.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+        }
+        #img6{
+            background-image: url(Images/cancun.hotel6.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+        }
+        #img7{
+            background-image: url(Images/cancun.hotel7.jpg);
+            background-size: cover;
+            background-position: center;
+            width:30%;
+            height:100%;
+        }
+     
+        #slider-range{
+            margin:auto;
+            width:500px;
+            
+        }
+        #amount{
+            margin-left: 90px;
+        }
+        #button{
+            background-color: rgb(3, 52, 105);
+            color:white;
+        }
+        #effectTypes{
+            color:white;
+            background-color: white;
+            border: none;
+            width:0;
+            height:0;
+
+        }
+        #fcontainer{
+            width:80%;
+            height:80%;
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 30px;
+         
+        }
+        #fcontainer2{
+            width:20%;
+            height:80%;
+            
+
+        }
+        #fbox1, #fbox2{
+            width:300px;
+            height:100%;
+        }
+         #einput{
+            width:100px;
+         
+        }
+        #button{
+            width:104px;
+            height:30px;
+            background-color: black;
+            color:white;
+        }
+        #foot{
+            color:white;
+        }
+        footer{
+            width:100%;
+            height:200px;
+            background-color: rgb(3, 52, 105);
+           
+            display: flex;
+            justify-content: center;
+        }
+        #effect{
+            border:none;
+        }
+    
+  #selectable .ui-selected {  color: white; border:5px solid rgb(3, 52, 105); width:350px; height:170px;}
+  #selectable { list-style-type: none; margin: 0;  padding: 0; width: 100%; height:60%; display: flex; justify-content: center; }
+  #selectable li { margin: 3px; padding: 1px; float: left; width: 130px; height: 120px; font-size: 4em; text-align: center; }
+      
+      
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div id="nav">
+            <a href="./index.html" class="navb">Home</a>
+            <a href="./jquerysite4.html" class="navb">Activities</a>
+            <a href="./jquerysite5.html" class="navb">Hotels</a>
+            <a href="./jquerysite3.html" class="navb">Contact</a>
+            <a href="./jquerysite2.html" class="navb">Support</a>
+            
+        </div>
+    </header>
+    <br>
+    <div id="heading">
+        <h1>Book your stay at Cancun now!</h1>
+    </div>
+    <br>
+   
+    <div id="container">
+
+   
+        <div id="left">
+            <div id="top" >
+                <div class="toggler">
+                    <div id="effect" class="ui-widget-content ui-corner-all">
+                        <form>
+                        <fieldset id="field">
+                            <legend>Booking Information</legend>
+                            <br>
+                            <label for="nam">Name</label>
+                            <input type="text" id="nam" name="name" placeholder="First and Last Name">
+                            <br>
+                            <br>
+                            <label for="cel">Phone</label>
+                            <input type="tel" id="cel" name="cell" placeholder="(123)-456-7890">
+                            <br>
+                            <br>
+                            <label for="emai">Email</label>
+                            <input type="email" id="emai" name="email" title="We only ask for your email for contact purposes." placeholder="Ex: JohnDoe@gmail.com">
+                            <br>
+                            <br>
+                            <label for="datepicker">Date</label>
+                            <input type="text" id="datepicker">
+                            <br>
+                            <br>
+                            <label for="amount">Price Range Per Night</label>
+                            <br>
+                            <input type="text" id="amount">
+                            <div id="slider-range"></div>
+                            
+                            <button id="button" class="ui-state-default ui-corner-all">Search</button>
+            
+                        </fieldset>
+                        </form>
+                        <select name="effects" id="effectTypes">
+                            <option value="shake">Shake</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                <div id="bottom">
+                    <div id="selectable">
+                    <li class="ui-state-default" id="img1"></li>
+                    <li class="ui-state-default" id="img2"></li>
+                    <li class="ui-state-default" id="img3"></li>
+                    <li class="ui-state-default" id="img4"></li>
+                    <li class="ui-state-default" id="img5"></li>
+                    <li class="ui-state-default" id="img6"></li>
+                    <li class="ui-state-default" id="img7"></li>
+                    </div>
+                </div>
+            
+
+        </div>
+        <div id="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119111.48265723379!2d-86.92782899591053!3d21.103241762824428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29ac422009f9%3A0x2e673144d65c853f!2sHotel%20Zone%2C%20Canc%C3%BAn%2C%20Quintana%20Roo%2C%20Mexico!5e0!3m2!1sen!2sus!4v1670542925518!5m2!1sen!2sus" width="605" height="477" style="border:0;" allow="fullscreen" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div>
+    <footer>
+        <div id="fcontainer">
+            <div id="fbox1">
+                <p id="foot"><u><b>Customer Support</b></u> <br><br>Check My Booking<br><br><b>Contact us:<br></b> <br> Phone: (623)-824-1624 <br> Email: adelga289@west-mec.org</p>
+
+            </div>
+            <div id="fbox2">
+                <p id="foot"><u><b>Subsrcibe To Our Newsletter</b></u><br><br>Enter your email to be part of our weekly Cancun news updates!</p>
+                <br>
+                <input type="text" id="einput" placeholder="enter email">
+                <br>
+                <button id="button">Submit</button>
+            </div>
+        </div>
+        <div id="fcontainer2">
+            <div id="fbox3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126850.67421802909!2d-86.91927360701527!3d21.12132851009097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2b05aef653db%3A0xce32b73c625fcd8a!2sCanc%C3%BAn%2C%20Quintana%20Roo%2C%20Mexico!5e1!3m2!1sen!2sus!4v1670548798800!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

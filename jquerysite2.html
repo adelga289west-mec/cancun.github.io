@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  
+  <script>
+      $( function() {
+      $( "#accordion" ).accordion({
+        collapsible:true, heightStyle:"content"
+       
+      });
+    } );
+  </script>
+  <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+     .head{
+            width:100%;
+            height:100px;
+            background-color: rgb(3, 52, 105);
+            font-size: 0px;
+           
+        }
+        #nav{
+            display: flex;
+            color:white;
+            font-size: 30px;
+            justify-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            
+        }
+        .navb{
+            color:white;
+            text-decoration: none;
+            margin-top: 30px;
+        }
+        .navb:hover{
+            color:gray;
+        }
+        #indent{
+            margin-left:30px;
+        }
+        #container{
+            margin-top:50px;
+        
+        }
+     
+        #q{
+            font-size: 20px;
+        }
+        h1{
+            color:rgb(3, 52, 105);
+        }
+        #fcontainer{
+            width:80%;
+            height:80%;
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 30px;
+         
+        }
+        #fcontainer2{
+            width:20%;
+            height:80%;
+            
+
+        }
+        #fbox1, #fbox2{
+            width:300px;
+            height:100%;
+        }
+         #einput{
+            width:100px;
+         
+        }
+        #button{
+            width:104px;
+            height:30px;
+            background-color: black;
+            color:white;
+        }
+        #foot{
+            color:white;
+        }
+        footer{
+            width:100%;
+            height:200px;
+            background-color: rgb(3, 52, 105);
+            margin-top:50px;
+            display: flex;
+            justify-content: center;
+        }
+      
+     
+  </style>
+</head>
+<body>
+    <header class="head">
+        <div id="nav">
+            <a href="./index.html" class="navb">Home</a>
+            <a href="./jquerysite4.html" class="navb">Activities</a>
+            <a href="./jquerysite5.html" class="navb">Hotels</a>
+            <a href="./jquerysite3.html" class="navb">Contact</a>
+            <a href="./jquerysite2.html" class="navb">Support</a>
+            
+        </div>
+    </header>
+    <div id="container">
+        <h1>Frequently Asked Questions</h1>
+        <br>
+        <div id="accordion">
+            <h3>What is the best month to go to Cancun?</h3>
+            <div>
+                <p>If we talk about weather, the best season is from February to June since the weather is not too hot and it is not rainy or hurricane season.If we talk about money, you can travel in low season from September to November.</p>
+            </div>
+            
+            <h3>What kind of activities are available at Cancun?</h3>
+            <div>
+                <p>There are plenty of activities to do in Cancun. Several shopping malls with high-end boutiques, water activities, tours by the jungle, and even museums!
+                    Pamper yourself at a Spa, discover the surroundings which are full of adventures, and taste different flavors in the numerous restaurants here.
+                    
+                    Many things are waiting for you on your next Cancun vacation. You can take a walk by many places, visit several beaches, watch from a high point the Cancun’s Hotel Zone, have a snorkeling tour, and much more!</p>
+            </div>
+            <h3>Do I need to know Spanish to go to Cancun?</h3>
+            <div>
+                <p>Cancun is tourist friendly enough that if you don't speak a word of Spanish, you'd still get around fine. However, that doesn't mean that it's not a good idea to at least try to pick up the local vocabulary.</p>
+            </div>
+            <h3>How many days should I spend in Cancun?</h3>
+            <div>
+                <p>Many travelers recommend spending approximately 10 days in Cancun to visit the beaches, archaeological sites, and other nearby destinations such as the Riviera Maya or the neighboring state of Yucatan.</p>
+            </div>
+            <h3>When is high season in Cancun?</h3>
+            <div>
+                <p>
+                    In Cancun there are 3 seasons with the highest influx of visitors:
+                    </p>
+                    <ul>
+                        <li id="indent">Holy week in April</li>
+                        <li id="indent">Summer vacation in July and August</li>
+                        <li id="indent">Winter vacations in December and January</li>
+                    </ul>
+                
+            </div>
+            <h3>Do I need a passport to go to Cancun?</h3>
+            <div>
+                <p>Since Cancun is located in Mexico, if you are not Mexican, you need a passport to enter the country. If you are Mexican you do not need a passport.</p>
+            </div>
+            <h3>What do I need to fly to Cancun?</h3>
+            <div>
+                <p>If you are traveling to Cancun as a tourist you need:
+                    <ul>
+                        <li id="indent">Valid passport with at least 6 months validity.
+                        </li>
+                        <li id="indent">Multiple immigration form (you get it on the plane).
+                        </li>
+                        <li id="indent">Departure ticket from Mexico.
+                        </li>
+                        <li id="indent">Proof of the reason for your trip (with an itinerary or the departure tickets from Mexico).
+                        </li>
+                        <li id="indent">Visa, in case your country requires it to enter Mexico.
+                        </li>
+                    </ul>
+
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <p id="q">Have your own Question? <a href="./jquerysite3.html"> Contact us </a> and we will help!</p>
+    </div>
+    <footer>
+        <div id="fcontainer">
+            <div id="fbox1">
+                <p id="foot"><u><b>Customer Support</b></u> <br><br>Check My Booking<br><br><b>Contact us:<br></b> <br> Phone: (623)-824-1624 <br> Email: adelga289@west-mec.org</p>
+
+            </div>
+            <div id="fbox2">
+                <p id="foot"><u><b>Subsrcibe To Our Newsletter</b></u><br><br>Enter your email to be part of our weekly Cancun news updates!</p>
+                <br>
+                <input type="text" id="einput" placeholder="enter email">
+                <br>
+                <button id="button">Submit</button>
+            </div>
+        </div>
+        <div id="fcontainer2">
+            <div id="fbox3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126850.67421802909!2d-86.91927360701527!3d21.12132851009097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2b05aef653db%3A0xce32b73c625fcd8a!2sCanc%C3%BAn%2C%20Quintana%20Roo%2C%20Mexico!5e1!3m2!1sen!2sus!4v1670548798800!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
